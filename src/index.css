@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm seasonal palette — cream, terracotta, sage, deep forest */
+    --background: 38 44% 96%;
+    --foreground: 24 24% 14%;
+
+    --card: 38 50% 98%;
+    --card-foreground: 24 24% 14%;
+
+    --popover: 38 50% 98%;
+    --popover-foreground: 24 24% 14%;
+
+    /* Terracotta primary */
+    --primary: 14 62% 48%;
+    --primary-foreground: 38 50% 98%;
+    --primary-glow: 18 75% 60%;
+
+    /* Sage secondary */
+    --secondary: 88 18% 78%;
+    --secondary-foreground: 120 22% 18%;
+
+    --muted: 38 28% 90%;
+    --muted-foreground: 24 14% 38%;
+
+    /* Deep forest accent */
+    --accent: 120 22% 22%;
+    --accent-foreground: 38 50% 98%;
+
+    /* Mustard highlight */
+    --highlight: 38 78% 56%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 38 50% 98%;
+
+    --border: 30 20% 86%;
+    --input: 30 20% 86%;
+    --ring: 14 62% 48%;
+
+    --radius: 1rem;
+
+    --gradient-warm: linear-gradient(135deg, hsl(14 62% 48%), hsl(28 78% 58%));
+    --gradient-cream: linear-gradient(180deg, hsl(38 44% 96%), hsl(38 38% 92%));
+    --gradient-overlay: linear-gradient(180deg, hsl(24 24% 14% / 0.1) 0%, hsl(24 24% 14% / 0.65) 100%);
+
+    --shadow-warm: 0 20px 60px -20px hsl(14 62% 48% / 0.35);
+    --shadow-soft: 0 8px 30px -12px hsl(24 24% 14% / 0.18);
+    --shadow-card: 0 2px 12px hsl(24 24% 14% / 0.06);
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
+  }
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-fade-up { animation: fade-up 0.8s ease-out both; }
+.animate-float { animation: float-slow 6s ease-in-out infinite; }
