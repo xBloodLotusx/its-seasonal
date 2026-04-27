@@ -1,15 +1,16 @@
-import spring from "@/assets/spring.jpg";
-import summer from "@/assets/summer.jpg";
-import fall from "@/assets/fall.jpg";
-import christmas from "@/assets/christmas.jpg";
-import gifts from "@/assets/gifts.jpg";
+
+import entrance from "@/assets/its-seasonal-entrance.jpg";
+import sign from "@/assets/its-seasonal-sign.jpg";
+import decorations from "@/assets/its-seasonal-decorations.jpg";
+import snacks from "@/assets/its-seasonal-snacks.jpg";
+import favicon from "@/assets/its-seasonal-favicon.jpg";
 
 const collections = [
-  { title: "Spring Décor", desc: "Pastels, florals, and fresh starts.", img: spring, span: "md:col-span-4" },
-  { title: "Summer Outdoor", desc: "Bright porches and patio touches.", img: summer, span: "md:col-span-4" },
-  { title: "Fall & Halloween", desc: "Pumpkins, plaid, and harvest hues.", img: fall, span: "md:col-span-4" },
-  { title: "Christmas & Holiday", desc: "Wreaths, lights, and merry magic.", img: christmas, span: "md:col-span-7" },
-  { title: "Gifts & Home Accents", desc: "Year-round finds for every occasion.", img: gifts, span: "md:col-span-5" },
+  { title: "Welcoming Entrance", desc: "Step inside for a warm welcome.", img: entrance, span: "md:col-span-4" },
+  { title: "Charming Sign", desc: "Look for our sign on Durham Rd.", img: sign, span: "md:col-span-4" },
+  { title: "Decorated Displays", desc: "Seasonal décor and inspiration.", img: decorations, span: "md:col-span-4" },
+  { title: "Snacks & Treats", desc: "Local favorites and sweet finds.", img: snacks, span: "md:col-span-6" },
+  { title: "Our Iconic Tree", desc: "A symbol of It's Seasonal.", img: favicon, span: "md:col-span-6" },
 ];
 
 const Collections = () => {
