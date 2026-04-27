@@ -1,6 +1,6 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import hero from "@/assets/hero-seasonal.jpg";
+import hero from "@/assets/its-seasonal.jpg";
 
 const Hero = () => {
   return (
