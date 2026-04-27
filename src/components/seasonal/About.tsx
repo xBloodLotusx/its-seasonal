@@ -1,4 +1,15 @@
 import { MapPin, Heart, Sparkles } from "lucide-react";
+import entrance from "@/assets/its-seasonal-entrance.jpg";
+import sign from "@/assets/its-seasonal-sign.jpg";
+import decorations from "@/assets/its-seasonal-decorations.jpg";
+import snacks from "@/assets/its-seasonal-snacks.jpg";
+
+const photos = [
+  { src: entrance, alt: "Entrance to It's Seasonal gift shop in Timberlake, NC" },
+  { src: sign, alt: "It's Seasonal storefront sign" },
+  { src: decorations, alt: "Seasonal decorations inside the shop" },
+  { src: snacks, alt: "Snacks and treats available at It's Seasonal" },
+];
 
 const About = () => {
   return (
@@ -38,6 +49,19 @@ const About = () => {
               <p className="text-sm text-muted-foreground">7416 Durham Rd, Timberlake, NC 27583</p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {photos.map((photo) => (
+            <div key={photo.alt} className="overflow-hidden rounded-2xl aspect-square shadow-card">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className="h-full w-full object-cover transition-smooth hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
