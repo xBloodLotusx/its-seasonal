@@ -3,7 +3,6 @@ import Navbar from "@/components/seasonal/Navbar";
 import Hero from "@/components/seasonal/Hero";
 import About from "@/components/seasonal/About";
 import Collections from "@/components/seasonal/Collections";
-import Featured from "@/components/seasonal/Featured";
 import Location from "@/components/seasonal/Location";
 import Testimonials from "@/components/seasonal/Testimonials";
 import Footer from "@/components/seasonal/Footer";
@@ -62,7 +61,6 @@ const Index = () => {
       <Hero />
       <About />
       <Collections />
-      <Featured />
       <Location />
       <Testimonials />
       <Footer />
