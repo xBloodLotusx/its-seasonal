@@ -1,13 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import candle from "@/assets/feat-candle.jpg";
-import wreath from "@/assets/feat-wreath.jpg";
-import pumpkin from "@/assets/feat-pumpkin.jpg";
+
+import entrance from "@/assets/its-seasonal-entrance.jpg";
+import sign from "@/assets/its-seasonal-sign.jpg";
+import decorations from "@/assets/its-seasonal-decorations.jpg";
+import snacks from "@/assets/its-seasonal-snacks.jpg";
 
 const items = [
-  { name: "Hand-Poured Soy Candle", tag: "New Arrival", price: "$24", img: candle },
-  { name: "Autumn Harvest Wreath", tag: "Best Seller", price: "$58", img: wreath },
-  { name: "Ceramic Heirloom Pumpkin", tag: "Limited", price: "$32", img: pumpkin },
+  { name: "Welcoming Entrance", tag: "Storefront", price: "", img: entrance },
+  { name: "Charming Sign", tag: "Our Sign", price: "", img: sign },
+  { name: "Seasonal Decorations", tag: "Inside Look", price: "", img: decorations },
+  { name: "Snacks & Treats", tag: "Local Favorites", price: "", img: snacks },
 ];
 
 const Featured = () => {
@@ -25,7 +28,7 @@ const Featured = () => {
           </Button>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <article key={item.name} className="group">
               <div className="relative overflow-hidden rounded-3xl bg-card shadow-card">
@@ -45,7 +48,6 @@ const Featured = () => {
               </div>
               <div className="mt-5 flex items-baseline justify-between">
                 <h3 className="font-display text-xl">{item.name}</h3>
-                <span className="font-display text-lg text-primary">{item.price}</span>
               </div>
             </article>
           ))}
