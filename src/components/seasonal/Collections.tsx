@@ -1,16 +1,12 @@
 
 import entrance from "@/assets/its-seasonal-entrance.jpg";
-import sign from "@/assets/its-seasonal-sign.jpg";
 import decorations from "@/assets/its-seasonal-decorations.jpg";
 import snacks from "@/assets/its-seasonal-snacks.jpg";
-import favicon from "@/assets/its-seasonal-favicon.jpg";
 
 const collections = [
-  { title: "Welcoming Entrance", desc: "Step inside for a warm welcome.", img: entrance, span: "md:col-span-4" },
-  { title: "Charming Sign", desc: "Look for our sign on Durham Rd.", img: sign, span: "md:col-span-4" },
+  { title: "Fresh Flowers", desc: "Seasonal blooms greet you at the door.", img: entrance, span: "md:col-span-4" },
   { title: "Decorated Displays", desc: "Seasonal décor and inspiration.", img: decorations, span: "md:col-span-4" },
   { title: "Snacks & Treats", desc: "Local favorites and sweet finds.", img: snacks, span: "md:col-span-6" },
-  { title: "Our Iconic Tree", desc: "A symbol of It's Seasonal.", img: favicon, span: "md:col-span-6" },
 ];
 
 const Collections = () => {
