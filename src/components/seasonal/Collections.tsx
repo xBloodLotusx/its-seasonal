@@ -4,9 +4,9 @@ import decorations from "@/assets/its-seasonal-decorations.jpg";
 import snacks from "@/assets/its-seasonal-snacks.jpg";
 
 const collections = [
-  { title: "Fresh Flowers", desc: "Seasonal blooms greet you at the door.", img: entrance, span: "md:col-span-4" },
-  { title: "Decorated Displays", desc: "Seasonal décor and inspiration.", img: decorations, span: "md:col-span-4" },
-  { title: "Snacks & Treats", desc: "Local favorites and sweet finds.", img: snacks, span: "md:col-span-6" },
+  { title: "Fresh Flowers", desc: "Seasonal blooms greet you at the door.", img: entrance },
+  { title: "Decorated Displays", desc: "Seasonal décor and inspiration.", img: decorations },
+  { title: "Snacks & Treats", desc: "Local favorites and sweet finds.", img: snacks },
 ];
 
 const Collections = () => {
@@ -25,11 +25,11 @@ const Collections = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-12">
+        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">
           {collections.map((c) => (
             <article
               key={c.title}
-              className={`group relative overflow-hidden rounded-3xl shadow-card transition-smooth hover:shadow-warm ${c.span}`}
+              className="group relative overflow-hidden rounded-3xl shadow-card transition-smooth hover:shadow-warm"
             >
               <div className="relative aspect-[4/5] md:aspect-[4/5]">
                 <img
